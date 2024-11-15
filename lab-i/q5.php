@@ -5,10 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sum of Indivual Digits</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="#" method="POST">
         <label for="num">Number: </label>
         <input type="text" name="num">
         <input type="submit" name="sub"/>
@@ -16,14 +16,8 @@
 
     <?php
             $num = $_POST['num'];
-            $newNum = $num;
-            $dig = 0;
-            $sum = 0;
-
-            while($newNum != 0){
-                $dig = $newNum % 10;
-                $sum += $dig;
-                $newNum = floor($newNum / 10);
+            for($i=1;$i<=$num;$i++){
+                $sum += $i;
             }
 
             echo "Sum of digit: $sum";
